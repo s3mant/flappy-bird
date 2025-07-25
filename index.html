@@ -18,9 +18,16 @@
 
 <body>
     <div id="container">
+        <div id="loadingOverlay" class="overlay">
+            <div>Injecting pixelated chaos...</div>
+        </div>
+
+        <footer>
+            Made with ❤️ by <a href="https://semant.is-a.dev" target="_blank">Semant</a>
+        </footer>
         <canvas id="board" width="400" height="600"></canvas>
 
-        <div id="startOverlay" class="overlay">
+        <div id="startOverlay" class="overlay hidden">
             <div>Tap to Start</div>
             <div class="scoreboard" style="text-align:center">
                 Best Score:<br> <span id="startBestScore">0</span>
@@ -37,9 +44,6 @@
                 <button class="btn" onclick="restart()">Tap to Restart</button>
             </div>
         </div>
-        <footer>
-            Made with ❤️ by <a href="https://semant.is-a.dev" target="_blank">Semant</a>
-        </footer>
     </div>
 
     <script src="script.js"></script>

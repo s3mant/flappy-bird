@@ -1,4 +1,5 @@
 
+
 const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
 
@@ -154,8 +155,8 @@ function draw() {
         ctx.drawImage(pipeUpImg, p.x, p.y + gap, 79, 360);
     });
 
-    ctx.drawImage(groundImg, groundX, 535, baseWidth, 63);
-    ctx.drawImage(groundImg, groundX + baseWidth, 535, baseWidth, 64);
+    ctx.drawImage(groundImg, groundX, 536, baseWidth, 64);
+    ctx.drawImage(groundImg, groundX + baseWidth, 536, baseWidth, 64);
 
     // Bird direction & rotation
     let sprite;
@@ -224,9 +225,36 @@ function resizeCanvas() {
 
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
+const assetsToLoad = [
+    bgImg, groundImg,
+    birdSprites.up, birdSprites.mid, birdSprites.down,
+    pipeUpImg, pipeDownImg,
+    flapSfx, slapSfx, scoreSfx
+];
 
-resetGame();
-update();
+let assetsLoaded = 0;
+const loadingOverlay = document.getElementById("loadingOverlay");
+
+function checkAllAssetsLoaded() {
+    assetsLoaded++;
+    if (assetsLoaded === assetsToLoad.length) {
+        // Hide loading, start game
+        loadingOverlay.classList.add("hidden");
+        startOverlay.classList.remove("hidden");
+
+        resetGame();
+        update();
+
+    }
+}
+
+assetsToLoad.forEach(asset => {
+    if (asset instanceof HTMLImageElement) {
+        asset.onload = checkAllAssetsLoaded;
+    } else if (asset instanceof HTMLAudioElement) {
+        asset.oncanplaythrough = checkAllAssetsLoaded;
+    }
+});
 
 ///pwa
 if ('serviceWorker' in navigator) {

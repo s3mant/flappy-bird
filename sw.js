@@ -1,15 +1,22 @@
 const CACHE_NAME = "flappy-bird-cache-v1";
 const URLS_TO_CACHE = [
-    "/flappy-bird/",
-    "/flappy-bird/index.html",
-    "/flappy-bird/script.js",
-    "/flappy-bird/assets/midflap.png",
-    "./assets/upflap.png",
-    "./assets/downflap.png",
-    "./assets/midflap.png",
-    "./assets/icon.png",
-    "./assets/BaiJamjuree-Bold.ttf"
+    "./",
+    "./index.html",
+    "./script.js",
+    "./assets/birds/midflap.png",
+    "./assets/birds/upflap.png",
+    "./assets/birds/downflap.png",
+    "./assets/BaiJamjuree-Bold.ttf",
+    '/assets/background.png',
+    '/assets/ground.png',
+    '/assets/pipe-up.png',
+    '/assets/pipe-down.png',
+    '/assets/thumbnail.png',
 
+    // Audio
+    '/assets/woosh.wav',
+    '/assets/slap.wav',
+    '/assets/score.wav',
 ];
 
 self.addEventListener("install", e => {

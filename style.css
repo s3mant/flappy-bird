@@ -1,93 +1,110 @@
- @font-face {
-   font-family: 'Reg';
-   src: url('assets/BaiJamjuree-Bold.ttf') format("truetype");
-   font-display: swap;
- }
+@font-face {
+  font-family: 'Reg';
+  src: url('assets/BaiJamjuree-Bold.ttf') format("truetype");
+  font-display: swap;
+}
 
- html,
- body {
-   margin: 0;
-   padding: 0;
-   background: radial-gradient(circle at top center, #801650 0%, #894b24 100%);
-   overflow: hidden;
-   font-family: 'Arial', sans-serif;
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
-   position: relative;
-   font-family: 'Reg', sans-serif;
-   color: #ffffff;
-   text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
-   font-weight: bold;
- }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top center, #801650 0%, #894b24 100%);
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Reg', sans-serif;
+  color: #ffffff;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-weight: bold;
+}
 
- #container {
-   position: absolute;
-   inset: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+#container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- canvas {
-   background: transparent;
-   image-rendering: pixelated;
-   display: block;
- }
+canvas {
+  background: transparent;
+  image-rendering: pixelated;
+  display: block;
+}
 
- .overlay {
-   position: absolute;
-   inset: 0;
-   color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   font-size: 2rem;
-   background: rgba(0, 0, 0, 0.4);
-   z-index: 10;
-   flex-direction: column;
- }
+.overlay {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  flex-direction: column;
+}
 
- .hidden {
-   display: none;
- }
+.hidden {
+  display: none;
+}
 
- .scoreboard {
-   font-size: 1.2rem;
-   margin-top: 1rem;
- }
+.scoreboard {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
 
- .btn {
-   background: none;
-   color: #fff;
-   border: none;
-   font-weight: bold;
-   font-size: 18px;
-   text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
- }
+#loadingOverlay div {
+  font-family: sans-serif;
+  animation: blink 1s infinite;
+}
 
- footer {
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
-   color: white;
-   font-size: 14px;
-   padding: 0.4rem;
-   background: rgba(0, 0, 0, 0.4);
-   z-index: 20;
- }
+@keyframes blink {
 
- footer a {
-   color: #e7481d;
-   text-decoration: none;
- }
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+footer {
+  position: absolute;
+  margin-bottom: -80vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2vh;
+  padding: 7px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+footer a {
+  color: #e7481d;
+  text-decoration: none;
+}
