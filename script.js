@@ -108,7 +108,7 @@ function update() {
                     score++;
                     p.scored = true;
                     scoreSfx.play();
-                    if (score === 2 && !location.search.includes('nojumpscare')) {
+                    if (score === 7 && !location.search.includes('nojumpscare')) {
                         triggerJumpScare();
                     }
                 }
