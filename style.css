@@ -94,7 +94,7 @@ canvas {
 
 footer {
   position: absolute;
-  margin-bottom: -80vh;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: white;

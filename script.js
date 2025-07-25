@@ -212,6 +212,11 @@ function resizeCanvas() {
 
     let width = window.innerWidth;
     let height = window.innerHeight;
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+        canvas.style.marginTop = "-50px";
+        document.querySelector('footer').style.bottom = '8vh';
+    }
 
     if (width / height > aspect) {
         width = height * aspect;
