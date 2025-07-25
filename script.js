@@ -108,6 +108,9 @@ function update() {
                     score++;
                     p.scored = true;
                     scoreSfx.play();
+                    if (score === 2 && !location.search.includes('nojumpscare')) {
+                        triggerJumpScare();
+                    }
                 }
             });
 
@@ -130,6 +133,14 @@ function update() {
 
     draw();
     requestAnimationFrame(update);
+}
+function triggerJumpScare() {
+    const video = document.getElementById('jumpscare');
+    video.volume = 1;
+    video.muted = false;
+    video.style.display = 'block';
+    video.currentTime = 0;
+    video.play();
 }
 
 function triggerGameOver() {
