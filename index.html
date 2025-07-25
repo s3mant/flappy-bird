@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Play Flappy Bird online, built with HTML5 and JavaScript!" />
+    <meta property="og:title" content="Flappy Bird" />
+    <meta property="og:description" content="A smooth Flappy Bird remake hosted on semant.is-a.dev. Tap to fly!" />
+    <meta property="og:image" content="https://semant.is-a.dev/flappy-bird/assets/thumbnail.png" />
+    <meta property="og:url" content="https://semant.is-a.dev/flappy-bird" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/birds/midflap.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="board" width="400" height="600"></canvas>
+
+        <div id="startOverlay" class="overlay">
+            <div>Tap to Start</div>
+            <div class="scoreboard" style="text-align:center">
+                Best Score:<br> <span id="startBestScore">0</span>
+            </div>
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden">
+            <div>
+                <div>Game Over</div>
+                <div class="scoreboard">
+                    Score: <span id="finalScore">0</span><br />
+                    Best: <span id="bestScore">0</span>
+                </div>
+                <button class="btn" onclick="restart()">Tap to Restart</button>
+            </div>
+        </div>
+        <footer>
+            Made with ❤️ by <a href="https://semant.is-a.dev" target="_blank">Semant</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

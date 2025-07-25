@@ -1,0 +1,93 @@
+ @font-face {
+   font-family: 'Reg';
+   src: url('assets/BaiJamjuree-Bold.ttf') format("truetype");
+   font-display: swap;
+ }
+
+ html,
+ body {
+   margin: 0;
+   padding: 0;
+   background: radial-gradient(circle at top center, #801650 0%, #894b24 100%);
+   overflow: hidden;
+   font-family: 'Arial', sans-serif;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   font-family: 'Reg', sans-serif;
+   color: #ffffff;
+   text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+   font-weight: bold;
+ }
+
+ #container {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ canvas {
+   background: transparent;
+   image-rendering: pixelated;
+   display: block;
+ }
+
+ .overlay {
+   position: absolute;
+   inset: 0;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-size: 2rem;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: 10;
+   flex-direction: column;
+ }
+
+ .hidden {
+   display: none;
+ }
+
+ .scoreboard {
+   font-size: 1.2rem;
+   margin-top: 1rem;
+ }
+
+ .btn {
+   background: none;
+   color: #fff;
+   border: none;
+   font-weight: bold;
+   font-size: 18px;
+   text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+ }
+
+ footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   color: white;
+   font-size: 14px;
+   padding: 0.4rem;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: 20;
+ }
+
+ footer a {
+   color: #e7481d;
+   text-decoration: none;
+ }
